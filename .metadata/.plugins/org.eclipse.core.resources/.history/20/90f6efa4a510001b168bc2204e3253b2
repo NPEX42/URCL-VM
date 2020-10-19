@@ -1,0 +1,23 @@
+package np.urcl.io;
+
+import java.util.Scanner;
+
+public class STDIO implements IO {
+
+	@Override
+	public void Println(String msg) {
+		System.out.println(msg);
+	}
+
+	@Override
+	public void Print(String msg) {
+		System.out.print(msg);
+	}
+
+	@Override
+	public String Readln() {
+		Scanner sc = new Scanner(System.in);
+		return sc.nextLine();
+	}
+
+}

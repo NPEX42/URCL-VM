@@ -1,0 +1,6 @@
+package np.urcl.asm;
+
+public interface Assembler {
+	String ProcessImports(String[] source);
+	List<Byte> Assemble();
+}

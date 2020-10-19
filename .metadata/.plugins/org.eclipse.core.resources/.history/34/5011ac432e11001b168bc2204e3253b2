@@ -1,0 +1,24 @@
+package np.urcl.asm.tests;
+
+import static org.junit.jupiter.api.Assertions.*;
+
+import org.junit.jupiter.api.Test;
+
+class AssemblerTest {
+	
+	String[] source = {
+			"INC R1 R0",
+			"MOV R2 R0",
+			"ADD R2 R1 R2",
+			"BRC +3",
+			"ADD R1 R1 R2",
+			"BNC -3",
+			"HLT",
+	};
+	
+	@Test
+	void testAssemble() {
+		
+	}
+
+}

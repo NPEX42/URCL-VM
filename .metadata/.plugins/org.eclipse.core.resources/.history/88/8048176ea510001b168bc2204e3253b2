@@ -1,0 +1,5 @@
+package np.urcl.io;
+
+public class STDIO implements IO {
+
+}

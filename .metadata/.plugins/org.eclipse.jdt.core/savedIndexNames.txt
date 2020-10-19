@@ -1,0 +1,18 @@
+INDEX VERSION 1.131+/home/george/eclipse-workspace/URCL/.metadata/.plugins/org.eclipse.jdt.core
+1741876590.index
+2577554380.index
+1930557100.index
+2993052667.index
+2303626239.index
+1275295901.index
+801439552.index
+1175097169.index
+2761047478.index
+2693706958.index
+2998623905.index
+1628814552.index
+2283142057.index
+2754943304.index
+4196673740.index
+3140517530.index
+480380746.index

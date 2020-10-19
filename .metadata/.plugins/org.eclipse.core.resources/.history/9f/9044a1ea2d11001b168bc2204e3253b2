@@ -1,0 +1,13 @@
+package np.urcl.asm.tests;
+
+import static org.junit.jupiter.api.Assertions.*;
+
+import org.junit.jupiter.api.Test;
+
+class AssemblerTest {
+
+	@Test
+	void test() {
+	}
+
+}
