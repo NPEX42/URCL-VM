@@ -10,6 +10,8 @@ import org.junit.jupiter.api.Test;
 import np.urcl.asm.Assembler;
 import np.urcl.asm.AssemblerImpl;
 
+import static np.urcl.asm.BaseISA.*;
+
 class AssemblerTest {
 	
 	String[] source = {
@@ -22,20 +24,20 @@ class AssemblerTest {
 			"HLT"
 	};
 	List<Byte> expectedRom = Arrays.asList(
-			(byte) 0x02, (byte) 0x10, (byte) 0x01, (byte) 0x00, (byte) 0x00,
-			(byte) 0x03, (byte) 0x10, (byte) 0x02, (byte) 0x00, (byte) 0x00,
-			(byte) 0x04, (byte) 0x10, (byte) 0x02, (byte) 0x01, (byte) 0x02,
-			(byte) 0x10, (byte) 0x00, (byte) 0x03, (byte) 0x00, (byte) 0x00,
-			(byte) 0x04, (byte) 0x10, (byte) 0x01, (byte) 0x01, (byte) 0x02,
-			(byte) 0x11, (byte) 0x00, (byte) 0x3D, (byte) 0x00, (byte) 0x00,
-			(byte) 0xFF, (byte) 0xFF, (byte) 0xFF, (byte) 0xFF, (byte) 0xFF
+			(byte) 0x00, (byte) INC, (byte) 0x01, (byte) 0x00, (byte) 0x00,
+			(byte) 0x00, (byte) MOV, (byte) 0x02, (byte) 0x00, (byte) 0x00,
+			(byte) 0x00, (byte) ADD, (byte) 0x02, (byte) 0x01, (byte) 0x02,
+			(byte) 0x00, (byte) BRC, (byte) 0x03, (byte) 0x00, (byte) 0x00,
+			(byte) 0x00, (byte) ADD, (byte) 0x01, (byte) 0x01, (byte) 0x02,
+			(byte) 0x00, (byte) BNC, (byte) -3  , (byte) 0x00, (byte) 0x00,
+			(byte) 0x00, (byte) HLT, (byte) 0x00, (byte) 0x00, (byte) 0x00
 	);
 	
 	@Test
 	void testAssemble() {
 		Assembler asm = new AssemblerImpl();
 		List<Byte> rom = asm.Assemble(source);
-		assertEquals(expectedRom, rom, "Error! Roms Dont Match! \n"+"Expected: "+expectedRom+"\n"+" Got: "+rom);
+		assertArrayEquals(expectedRom.toArray(new Byte[expectedRom.size()]), rom.toArray(new Byte[rom.size()]));
 	}
 
 }
