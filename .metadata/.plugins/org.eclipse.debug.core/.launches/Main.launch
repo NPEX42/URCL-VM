@@ -7,7 +7,9 @@
         <listEntry value="1"/>
     </listAttribute>
     <booleanAttribute key="org.eclipse.jdt.launching.ATTR_EXCLUDE_TEST_CODE" value="true"/>
+    <booleanAttribute key="org.eclipse.jdt.launching.ATTR_USE_CLASSPATH_ONLY_JAR" value="false"/>
     <stringAttribute key="org.eclipse.jdt.launching.MAIN_TYPE" value="np.urcl.app.Main"/>
-    <stringAttribute key="org.eclipse.jdt.launching.MODULE_NAME" value=""/>
+    <stringAttribute key="org.eclipse.jdt.launching.MODULE_NAME" value="URCL"/>
+    <stringAttribute key="org.eclipse.jdt.launching.PROGRAM_ARGUMENTS" value="asm/fib.urcl&#10;fib.bin"/>
     <stringAttribute key="org.eclipse.jdt.launching.PROJECT_ATTR" value="URCL"/>
 </launchConfiguration>
