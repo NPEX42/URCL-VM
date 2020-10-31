@@ -1,0 +1,2 @@
+#!/bin/bash
+java -jar URCLD-1.0.jar $1 asm/urcl8.txt

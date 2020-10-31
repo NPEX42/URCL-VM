@@ -1,0 +1,7 @@
+MAGIC (4B) - URCL
+versionMaj  (1B)
+versionMin  (1B)
+ProgramSize (2B)
+Program (ProgramSize Bytes) - Multiple Of 5
+ProgramChecksum (4B)
+

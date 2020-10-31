@@ -1,0 +1,2 @@
+#!/bin/bash
+java -jar URCLA-1.0.jar $1 $2 i

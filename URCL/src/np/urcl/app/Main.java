@@ -1,9 +1,0 @@
-package np.urcl.app;
-
-public class Main {
-
-	public static void main(String[] args) {
-		new App().Start(args);
-	}
-
-}

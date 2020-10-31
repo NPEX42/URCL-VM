@@ -1,0 +1,3 @@
+#!/bin/bash
+./URCLA $1 $1.rom id
+./URCL8 $1.rom
