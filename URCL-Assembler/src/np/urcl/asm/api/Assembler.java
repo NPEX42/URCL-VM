@@ -8,6 +8,10 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
+/**
+ * @author george
+ * @param <T>
+ */
 public abstract class Assembler<T extends Number> {
 	private HashMap<String, Number> defines = new HashMap<>();
 	private final OpcodeMapper<T> opcodes;

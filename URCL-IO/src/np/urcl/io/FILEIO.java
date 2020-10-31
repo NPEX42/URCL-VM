@@ -5,7 +5,9 @@ import java.io.BufferedWriter;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
-
+/**
+ * @author george
+ */
 public class FILEIO implements IO {
 
 	public static FILEIO OpenFile(String file) {

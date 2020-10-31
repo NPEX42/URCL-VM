@@ -6,7 +6,9 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 import np.urcl.asm.api.OpcodeMapper;
-
+/**
+ * @author george
+ */
 public class RegexOpcodeMapper<T extends Number> implements OpcodeMapper<T> {
 	private static Logger logger = Logger.Create(RegexOpcodeMapper.class);
 	private Map<String, T> regexes = new HashMap<>();
@@ -17,11 +19,11 @@ public class RegexOpcodeMapper<T extends Number> implements OpcodeMapper<T> {
 	public T GetOpcode(String line) {
 		for(String regex : regexes.keySet()) {
 			if(line.matches(regex)) {
-				logger.Log("Matched '",line,"' With '",regex,"'");
+				logger.Debug("Matched '",line,"' With '",regex,"'");
 				return regexes.get(regex); 
 			}
 		}
-		logger.Log("FOUND NO MATCH FOR '",line,"'");
+		logger.Debug("FOUND NO MATCH FOR '",line,"'");
 		return (T) new Byte((byte) 0x00);
 	}
 	
@@ -69,9 +71,9 @@ public class RegexOpcodeMapper<T extends Number> implements OpcodeMapper<T> {
 				} 
 				
 				mapper.AddEntry(sections[1], Byte.parseByte(sections[2],16));
-				logger.Log("Added Instruction '",sections[0],"', Regex: ",sections[1],", Opcode: ",sections[2]);
+				logger.Debug("Added Instruction '",sections[0],"', Regex: ",sections[1],", Opcode: ",sections[2]);
 			} else {
-				logger.Log("Malformatted Line: ",line);
+				logger.Debug("Malformatted Line: ",line);
 				malformattedCount++;
 			}
 		}

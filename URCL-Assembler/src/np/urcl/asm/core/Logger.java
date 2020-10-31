@@ -1,5 +1,7 @@
 package np.urcl.asm.core;
-
+/**
+ * @author george
+ */
 public class Logger {
 	
 	protected final String hostClassCallerName;
