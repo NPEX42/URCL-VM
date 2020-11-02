@@ -1,5 +1,0 @@
-package np.urcl.io;
-
-public interface IO {
-	
-}
