@@ -93,13 +93,12 @@ public class URCL extends Interpreter {
 			SetReg(parts[1], result);
 			
 			
-		} else if(line.matches("IMM" + WS + )) {
-			
+		} else if(line.matches("IMM" + WS + REGISTER + WS + IMMEDIATE)) {
+			SetReg(parts[1], ParseInt(parts[2]));
 		} else if(line.matches("OUT" + WS + IMMEDIATE + WS + REGISTER)) {
-			       if(ParseInt(parts[1]) == 0) {
-				System.out.print(GetReg(parts[2]));
-			} else if (ParseInt(parts[1]) == 1) {
-				System.out.print( (char) GetReg(parts[2]));
+			switch(ParseInt(parts[1])) {
+				case 0: System.out.print( GetReg(parts[2]));
+				case 1:	System.out.print( (char) GetReg(parts[2]));
 			}
 		} else if(line.matches("HLT")) {
 			return false;

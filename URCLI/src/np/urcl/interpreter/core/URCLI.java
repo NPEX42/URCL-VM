@@ -8,8 +8,9 @@ public class URCLI {
 				"BITS 16",
 				"MINREG 16",
 				"MINMEM 256",
+				".STDOUT 0",
 				"ADD R1 65 0",
-				"OUT 0 R1",
+				"OUT .STDOUT R1",
 				"OUT 1 R1",
 				"HLT"
 		};

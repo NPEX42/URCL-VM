@@ -84,6 +84,9 @@ public abstract class Interpreter {
 		for(String line : prog) {
 			if(line.matches(LABEL) && !labels.containsKey(line)) {
 				labels.put(line, index++);
+			} else if(line.matches(LABEL+WS+IMMEDIATE)) {
+				String[] sections = line.split(WS);
+				labels.put(sections[0], ParseInt(sections[1]));
 			}
 		}
 	}
